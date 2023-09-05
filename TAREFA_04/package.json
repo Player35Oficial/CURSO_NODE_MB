@@ -1,11 +1,11 @@
 {
-  "name": "1_instalacao_handlebars",
+  "name": "tarefa_04",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./index.js localhost 4000"
+    "start": "nodemon ./index.js localhost 3000"
   },
   "keywords": [],
   "author": "",

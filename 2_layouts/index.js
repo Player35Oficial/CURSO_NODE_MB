@@ -73,6 +73,6 @@ app.get('/blog', (req, res) => {
   res.render('blog', { posts })
 })
 
-app.listen(3000, () => {
+app.listen(4000, () => {
   console.log("App funcionando!");
 });
