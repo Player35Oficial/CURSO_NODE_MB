@@ -7,6 +7,10 @@ app.engine("handlebars", exphbs.engine());
 app.set("view engine", "handlebars");
 app.set("views", "./views")
 
+app.get("/dashboard", (req,res) => {
+  res.render("dashboard")
+})
+
 app.get("/", (_, res) => {
 
   const user = {
@@ -17,7 +21,9 @@ app.get("/", (_, res) => {
 
   const palavra = "Teste"
 
-  res.render("home", {user: user, palavra});
+  const auth = false
+
+  res.render("home", {user: user, palavra, auth});
 });
 
 app.listen(3000, () => {
