@@ -23,7 +23,9 @@ app.get("/", (_, res) => {
 
   const auth = false
 
-  res.render("home", {user: user, palavra, auth});
+  const approved = false
+
+  res.render("home", {user: user, palavra, auth, approved});
 });
 
 app.listen(3000, () => {
