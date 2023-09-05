@@ -8,7 +8,16 @@ app.set("view engine", "handlebars");
 app.set("views", "./views")
 
 app.get("/", (_, res) => {
-  res.render("home");
+
+  const user = {
+    name: "Yuri",
+    surname: "Santana",
+    age: 19
+  }
+
+  const palavra = "Teste"
+
+  res.render("home", {user: user, palavra});
 });
 
 app.listen(3000, () => {
