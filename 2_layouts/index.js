@@ -31,6 +31,17 @@ app.get("/", (_, res) => {
   res.render("home", {user: user, palavra, auth, approved});
 });
 
+app.get('/post', (req, res) => {
+  const post = {
+    title: "Aprender NodeJs",
+    category: "JavaScript",
+    body: "Este artigo vai te ajudar a aprender Node.js....",
+    comments: 4
+  }
+
+  res.render('blogpost', {post})
+})
+
 app.listen(3000, () => {
   console.log("App funcionando!");
 });
