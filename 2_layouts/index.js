@@ -8,7 +8,10 @@ app.set("view engine", "handlebars");
 app.set("views", "./views")
 
 app.get("/dashboard", (req,res) => {
-  res.render("dashboard")
+
+  const items = ["item a", "item b", "item C"]
+  
+  res.render("dashboard", { items })
 })
 
 app.get("/", (_, res) => {
@@ -21,7 +24,7 @@ app.get("/", (_, res) => {
 
   const palavra = "Teste"
 
-  const auth = false
+  const auth = true
 
   const approved = false
 
